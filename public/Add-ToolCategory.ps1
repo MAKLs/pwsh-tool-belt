@@ -2,8 +2,8 @@ function Add-ToolCategory
 {
    param
    (
-	   [Parameter(Mandatory=$true)]
-	   [string]$ToolCategoryName
+      [Parameter(Mandatory=$true)]
+      [string]$ToolCategoryName
    )
 
    #Clean tool category name
@@ -24,7 +24,7 @@ function Add-ToolCategory
 
    try
    {
-	   #Create tool category components
+      #Create tool category components
       foreach ($comp in $catComponents)
       {
          New-Item @comp | Out-Null
@@ -36,6 +36,6 @@ function Add-ToolCategory
 
    catch
    {
-	   Write-Warning $_.Exception.Message
+      Write-Warning $_.Exception.Message
    }
 }
