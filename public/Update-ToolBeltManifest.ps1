@@ -56,7 +56,7 @@ function Update-ToolBeltManifest
    #Test module to verify that all is good
    try
    {
-      Test-ModuleManifest -Path $manifest | Out-Null
+      $null = Test-ModuleManifest -Path $manifest
    }
    catch [System.Management.Automation.CmdletInvocationException]
    {

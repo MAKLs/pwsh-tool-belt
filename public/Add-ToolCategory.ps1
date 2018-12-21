@@ -27,7 +27,7 @@ function Add-ToolCategory
       #Create tool category components
       foreach ($comp in $catComponents)
       {
-         New-Item @comp | Out-Null
+         $null = New-Item @comp
       }
 
       #Update manifest with new tool category module
