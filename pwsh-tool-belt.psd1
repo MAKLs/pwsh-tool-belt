@@ -84,10 +84,10 @@ AliasesToExport = '*'
 # DscResourcesToExport = @()
 
 # List of all modules packaged with this module
-ModuleList = @(".\pwsh-tool-belt.psm1")
+ModuleList = @(".\pwsh-tool-belt.psm1",".\tool_networking\tool_networking.psm1")
 
 # List of all files packaged with this module
-FileList = @(".\pwsh-tool-belt.psd1",".\pwsh-tool-belt.psm1",".\pwsh-tool-belt.tests.ps1",".\README.md",".\public\Add-ToolCategory.ps1",".\public\Remove-ToolCategory.ps1",".\public\Update-ToolBeltManifest.ps1")
+FileList = @(".\pwsh-tool-belt.psd1",".\pwsh-tool-belt.psm1",".\pwsh-tool-belt.tests.ps1",".\README.md",".\public\Add-ToolCategory.ps1",".\public\Remove-ToolCategory.ps1",".\public\Update-ToolBeltManifest.ps1",".\tool_networking\tool_networking.psd1",".\tool_networking\tool_networking.psm1",".\tool_networking\public\Clear-DNS.ps1",".\tool_networking\public\Get-HostsContent.ps1",".\tool_networking\public\Set-HostsContent.ps1",".\tool_networking\public\Test-IPAddress.ps1")
 
 # Private data to pass to the module specified in RootModule/ModuleToProcess. This may also contain a PSData hashtable with additional module metadata used by PowerShell.
 PrivateData = @{
