@@ -10,5 +10,17 @@ function New-AdminShell
    to its runspace seems promising, but still not sure how to open new console from this host
    or how to elevate user token to admin.
    #>
-   Start-Process powershell -Verb runas
+   switch -Exact ($PSEdition) {
+      "Desktop" {
+         Start-Process powershell -Verb runas
+      }
+
+      "Core" {
+         Start-Process pwsh -Verb runas
+      }
+
+      default {
+         Write-Error -Message "No process defined for PowerShell Edition: $($_)" -Category NotImplemented
+      }
+   }
 }
